@@ -2,21 +2,13 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 21, 2018 at 01:41 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Host: localhost:3306
+-- Generation Time: Nov 21, 2018 at 09:56 PM
+-- Server version: 5.7.23
+-- PHP Version: 5.6.37
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `clc2015`
@@ -25,33 +17,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_students`
+-- Table structure for table `drugs`
 --
 
-CREATE TABLE `tbl_students` (
+CREATE TABLE `drugs` (
   `id` int(11) NOT NULL,
-  `fullname` varchar(500) NOT NULL,
-  `phone` int(11) NOT NULL,
-  `email` varchar(500) NOT NULL
+  `name` varchar(500) NOT NULL,
+  `category` int(11) NOT NULL,
+  `price` varchar(500) NOT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `image` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_students`
+-- Dumping data for table `drugs`
 --
 
-INSERT INTO `tbl_students` (`id`, `fullname`, `phone`, `email`) VALUES
-(1552436, 'Hien Vinh', 1234, 'vinh@mail.com'),
-(7, 'James.B', 7, 'j@agent.com'),
-(1, 'a a', 111, 'a@mail'),
-(2, 'b a', 222, 'b@mail'),
-(3, 'c a', 333, 'c@mail'),
-(4, 'a d', 444, 'd@mail'),
-(5, 'a e', 555, 'e@mail'),
-(6, 'f a', 666, 'f@mail'),
-(7, 'g b', 777, 'g@mail'),
-(8, 'h', 888, 'h@mail'),
-(9, 'i', 999, 'i@mail'),
-(10, 'k', 101, 'k@mail');
+INSERT INTO `drugs` (`id`, `name`, `category`, `price`, `description`, `image`) VALUES
+(1, 'a a', 111, 'a@mail', '', '/images/ahihi.png'),
+(2, 'b a', 222, 'b@mail', '', '/images/hello.png'),
+(3, 'c a', 333, 'c@mail', '', NULL),
+(4, 'a d', 444, 'd@mail', '', NULL),
+(5, 'a e', 555, 'e@mail', '', NULL),
+(6, 'f a', 666, 'f@mail', '', NULL),
+(7, 'g b', 777, 'g@mail', '', NULL),
+(8, 'h', 888, 'h@mail', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores a natus nobis. Molestiae, eligendi modi? Alias accusantium eius quisquam eos, aut necessitatibus dolorem debitis dignissimos maxime facilis nam omnis quibusdam.', NULL),
+(9, 'i', 999, 'i@mail', '', NULL),
+(10, 'k', 101, 'k@mail', '', NULL),
+(11, 'James.B', 7, 'j@agent.com', '', NULL),
+(1552436, 'Hien Vinh', 1234, 'vinh@mail.com', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -72,8 +66,14 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`fullname`, `email`, `password`) VALUES
 ('vinh', 'c@mail.com', 'c12345678'),
 ('hvinh', 'a@mail.com', 'a12345678');
-COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `drugs`
+--
+ALTER TABLE `drugs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);

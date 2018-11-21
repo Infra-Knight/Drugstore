@@ -1,34 +1,36 @@
 
 <?php
-	//include connection file 
+	//include connection file
 	include_once("connection.php");
-	 
+
 	// initilize all variable
 	$params = $columns = $totalRecords = $data = array();
 
 	$params = $_REQUEST;
 
 	//define index of column
-	$columns = array( 
+	$columns = array(
 		0 =>'id',
-		1 =>'fullname', 
-		2 => 'phone',
-		3 => 'email'
+		1 =>'name',
+		2 => 'category',
+		3 => 'price',
+		4 => 'description',
+		5 => 'image'
 	);
 
 	$where = $sqlTot = $sqlRec = "";
 
 	// check search value exist
-	if( !empty($params['search']['value']) ) {   
+	if( !empty($params['search']['value']) ) {
 		$where .=" WHERE ";
-		$where .=" ( employee_name LIKE '".$params['search']['value']."%' ";    
-		$where .=" OR employee_salary LIKE '".$params['search']['value']."%' ";
-
-		$where .=" OR employee_age LIKE '".$params['search']['value']."%' )";
+		$where .=" (name LIKE '".$params['search']['value']."%' ";
+		$where .=" OR category LIKE '".$params['search']['value']."%' ";
+		$where .=" OR price LIKE '".$params['search']['value']."%')";
+		$where .=" OR description LIKE '".$params['search']['value']."%')";
 	}
 
 	// getting total number records without any search
-	$sql = "SELECT * FROM tbl_students ";
+	$sql = "SELECT * FROM drugs ";
 	$sqlTot .= $sql;
 	$sqlRec .= $sql;
 	//concatenate search sql if value exist
@@ -49,17 +51,16 @@
 	$queryRecords = mysqli_query($conn, $sqlRec) or die("error to fetch employees data");
 
 	//iterate on results row and create new index array of data
-	while( $row = mysqli_fetch_row($queryRecords) ) { 
+	while( $row = mysqli_fetch_row($queryRecords) ) {
 		$data[] = $row;
-	}	
+	}
 
 	$json_data = array(
-			"draw"            => intval( $params['draw'] ),   
-			"recordsTotal"    => intval( $totalRecords ),  
+			"draw"            => intval( $params['draw'] ),
+			"recordsTotal"    => intval( $totalRecords ),
 			"recordsFiltered" => intval($totalRecords),
 			"data"            => $data   // total data array
 			);
 
 	echo json_encode($json_data);  // send data as json format
 ?>
-	
