@@ -1,4 +1,4 @@
-- [ ] Show drugs in different categories (vitamins, antibiotic, ...)
+- [X] Show drugs in different categories (vitamins, antibiotic, ...)
 - [ ] List item order by attributes with pagination
 - [ ] Show drug specifications including images and description
 - [ ] Provide UML
