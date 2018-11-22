@@ -15,17 +15,17 @@
       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="index.html">simple<span class="logo_colour">style_banner</span></a></h1>
-          <h2>Simple. Contemporary. Website Template.</h2>
+          <h1><a href="index.php">Weed<span class="logo_colour">Pharmacy</span></a></h1>
+          <h2>All the medicine you need.</h2>
         </div>
       </div>
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="index.html">Home</a></li>
-          <li><a href="examples.html">Examples</a></li>
-          <li><a href="page.html">A Page</a></li>
-          <li><a href="another_page.html">Another Page</a></li>
+          <li class="selected"><a href="index.php">Home</a></li>
+          <li><a href="another_page.php">Medicine List</a></li>
+          <li><a href="page.html">Location</a></li>
+          <li><a href="examples.html">Examples</a></li>         
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
@@ -40,8 +40,8 @@
             <!-- insert your sidebar items here -->
             <h3>Latest News</h3>
             <h4>New Website Launched</h4>
-            <h5>February 1st, 2014</h5>
-            <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+            <h5>November 26th, 2018</h5>
+            <p>2018 sees the design of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
           </div>
           <div class="sidebar_base"></div>
         </div>
