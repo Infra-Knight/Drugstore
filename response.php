@@ -25,7 +25,7 @@
 		$where .=" WHERE ";
 		$where .=" (name LIKE '".$params['search']['value']."%' ";
 		$where .=" OR category LIKE '".$params['search']['value']."%' ";
-		$where .=" OR price LIKE '".$params['search']['value']."%')";
+		$where .=" OR price LIKE '".$params['search']['value']."%'";
 		$where .=" OR description LIKE '".$params['search']['value']."%')";
 	}
 

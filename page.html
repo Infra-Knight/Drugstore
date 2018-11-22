@@ -7,6 +7,14 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <style>
+    /* Set the size of the div element that contains the map */
+   #map {
+     height: 550px;  /* The height is 400 pixels */
+     width: 600px;  /* The width is the width of the web page */
+    }
+ </style>
+
 </head>
 
 <body>
@@ -71,14 +79,32 @@
           <div class="sidebar_base"></div>
         </div>
       </div>
-      <div id="content">
-        <!-- insert the page content here -->
-        <h1>A Page</h1>
+      <!--<div id="content">
+         insert the page content here -->
+        <!--<h1>A Page</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
-      </div>
+      </div>-->
+      <div id="map"></div>
+      <script>
+      // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var uluru = {lat: 10.773386, lng: 106.659339};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+          document.getElementById('map'), {zoom: 15, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+      </script>
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLKzKTfEw1ajHKwXg8kEOKfjZCERMpJ1Q&callback=initMap">
+      </script>
+  
     </div>
     <div id="content_footer"></div>
     <div id="footer">
