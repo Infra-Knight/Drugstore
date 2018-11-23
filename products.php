@@ -1,5 +1,5 @@
 <?php
-$selectedLink = 'list.php';
+$selectedLink = 'products.php';
 $subtitle = 'Medicine List';
 include_once('includes/head.php');
 ?>
@@ -14,7 +14,7 @@ include_once('includes/head.php');
       <div id="content">
         <!-- insert the page content here -->
         <h1>Another Page</h1>
-        <?php include_once('admin.php'); ?>
+        <?php include_once('includes/products-table.php'); ?>
       </div>
     </div>
     <?php include_once('includes/footer.php') ?>
@@ -27,7 +27,7 @@ $(document).ready(function() {
     "bProcessing": true,
     "serverSide": true,
     "ajax": {
-      url :"response.php", // json datasource
+      url :"data/response.php", // json datasource
       type: "post",  // type of method  ,GET/POST/DELETE
       error: function() {
         $("#employee_grid_processing").css("display","none");

@@ -1,7 +1,7 @@
 <?php
 $links = array();
 $links["index.php"] = "Home";
-$links["list.php"] = "Medicine List";
+$links["products.php"] = "Medicine List";
 $links["page.php"] = "Location";
 $links["examples.php"] = "Examples";
 $links["contact.php"] = "Contact Us";
