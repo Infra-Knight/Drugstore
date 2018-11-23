@@ -9,6 +9,7 @@ $selectedLink = 'list.php';
   $subtitle = 'Medicine List';
   include_once('includes/head.php');
   ?>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
 </head>
 
 <body>
@@ -24,6 +25,8 @@ $selectedLink = 'list.php';
     </div>
     <?php include_once('includes/footer.php') ?>
   </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 <script>
 $(document).ready(function() {
   $('#employee_grid').DataTable({
