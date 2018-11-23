@@ -1,14 +1,8 @@
 <?php
 $selectedLink = 'list.php';
+$subtitle = 'Medicine List';
+include_once('includes/head.php');
 ?>
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <?php
-  $subtitle = 'Medicine List';
-  include_once('includes/head.php');
-  ?>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
 </head>
 

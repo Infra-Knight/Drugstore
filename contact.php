@@ -1,14 +1,8 @@
 <?php
 $selectedLink = 'contact.php';
+$subtitle = 'Contact Us';
+include_once('includes/head.php');
 ?>
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <?php
-  $subtitle = 'Contact Us';
-  include_once('includes/head.php');
-  ?>
 </head>
 
 <body>

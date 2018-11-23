@@ -1,14 +1,8 @@
 <?php
 $selectedLink = 'examples.php';
+$subtitle = 'Examples';
+include_once('includes/head.php');
 ?>
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <?php
-  $subtitle = 'Examples';
-  include_once('includes/head.php');
-  ?>
 </head>
 
 <body>

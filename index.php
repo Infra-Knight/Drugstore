@@ -1,13 +1,7 @@
 <?php
 $selectedLink = 'index.php';
+include_once('includes/head.php');
 ?>
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <?php
-  include_once('includes/head.php');
-  ?>
 </head>
 
 <body>

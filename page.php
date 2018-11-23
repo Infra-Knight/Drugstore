@@ -1,14 +1,8 @@
 <?php
 $selectedLink = 'page.php';
+$subtitle = 'Pages';
+include_once('includes/head.php');
 ?>
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <?php
-  $subtitle = 'Pages';
-  include_once('includes/head.php');
-  ?>
   <style>
     /* Set the size of the div element that contains the map */
    #map {
