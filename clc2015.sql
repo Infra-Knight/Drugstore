@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 22, 2018 at 05:30 PM
+-- Generation Time: Nov 23, 2018 at 09:25 AM
 -- Server version: 8.0.12
 -- PHP Version: 7.2.12
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `clc2015`
 --
+CREATE DATABASE IF NOT EXISTS `clc2015` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `clc2015`;
 
 -- --------------------------------------------------------
 
@@ -28,6 +30,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `drugs`
 --
 
+DROP TABLE IF EXISTS `drugs`;
 CREATE TABLE `drugs` (
   `id` int(11) NOT NULL,
   `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -61,6 +64,7 @@ INSERT INTO `drugs` (`id`, `name`, `category`, `price`, `description`, `image`) 
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
