@@ -26,7 +26,7 @@ $selectedLink = 'list.php';
     <?php include_once('includes/footer.php') ?>
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 <script>
 $(document).ready(function() {
   $('#employee_grid').DataTable({
