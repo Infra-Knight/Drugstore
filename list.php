@@ -24,5 +24,28 @@ $selectedLink = 'list.php';
     </div>
     <?php include_once('includes/footer.php') ?>
   </div>
+<script>
+$(document).ready(function() {
+  $('#employee_grid').DataTable({
+    "bProcessing": true,
+    "serverSide": true,
+    "ajax": {
+      url :"response.php", // json datasource
+      type: "post",  // type of method  ,GET/POST/DELETE
+      error: function() {
+        $("#employee_grid_processing").css("display","none");
+      }
+    },
+    "columnDefs": [
+      {
+        "render": function ( data, type, row ) {
+            return data ? `<img src='${data}' style='height:50px'>` : '';
+        },
+        "targets": 5
+      }
+    ]
+  });
+});
+</script>
 </body>
 </html>
