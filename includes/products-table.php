@@ -8,6 +8,7 @@
                     <th>Name</th>
                     <th>Category</th>
                     <th>Price</th>
+                    <th>Unit</th>
                     <th>Description</th>
                     <th>Image</th>
                 </tr>
@@ -18,6 +19,7 @@
                     <th>Name</th>
                     <th>Category</th>
                     <th>Price</th>
+                    <th>Unit</th>
                     <th>Description</th>
                     <th>Image</th>
                 </tr>

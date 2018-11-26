@@ -38,7 +38,7 @@ $(document).ready(function() {
         "render": function ( data, type, row ) {
             return data ? `<img src='${data}' style='height:50px'>` : '';
         },
-        "targets": 5
+        "targets": 6
       }
     ]
   });

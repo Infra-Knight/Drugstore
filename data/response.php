@@ -12,8 +12,9 @@ $columns = array(
   1 =>'name',
   2 => 'category',
   3 => 'price',
-  4 => 'description',
-  5 => 'image'
+  4 => 'unit',
+  5 => 'description',
+  6 => 'image'
 );
 
 $where = $sqlTot = $sqlRec = "";
