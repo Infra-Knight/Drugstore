@@ -10,7 +10,7 @@ include_once('includes/head.php');
     <div id="site_content">
       <div id="banner"></div>
       <?php include_once('includes/sidebar.php'); ?>
-      <div id="content">
+      <main id="content">
         <!-- insert the page content here -->
         <h1>Welcome to the simplestyle_banner template</h1>
         <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
@@ -24,7 +24,7 @@ include_once('includes/head.php');
           <li>FireFox 25</li>
           <li>Google Chrome 31</li>
         </ul>
-      </div>
+      </main>
     </div>
     <?php include_once('includes/footer.php') ?>
   </div>

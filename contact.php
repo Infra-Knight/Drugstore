@@ -10,7 +10,7 @@ include_once('includes/head.php');
     <?php include_once('includes/header.php'); ?>
     <div id="site_content">
       <?php include_once('includes/sidebar.php'); ?>
-      <div id="content">
+      <main id="content">
         <!-- insert the page content here -->
         <h1>Contact Us</h1>
         <p>Below is an example of how a contact form might look with this template:</p>
@@ -21,7 +21,7 @@ include_once('includes/head.php');
             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
           </div>
         <p><br /><br />NOTE: A contact form such as this would require some way of emailing the input to an email address.</p>
-      </div>
+      </main>
     </div>
     <?php include_once('includes/footer.php') ?>
   </div>

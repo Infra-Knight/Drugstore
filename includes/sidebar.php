@@ -1,5 +1,5 @@
-<div id="sidebar_container">
-  <div class="sidebar">
+<aside id="sidebar_container">
+  <section class="sidebar">
     <div class="sidebar_top"></div>
     <div class="sidebar_item">
       <!-- insert your sidebar items here -->
@@ -9,8 +9,8 @@
       <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
     </div>
     <div class="sidebar_base"></div>
-  </div>
-  <div class="sidebar">
+  </section>
+  <section class="sidebar">
     <div class="sidebar_top"></div>
     <div class="sidebar_item">
       <h3>Useful Links</h3>
@@ -22,8 +22,8 @@
       </ul>
     </div>
     <div class="sidebar_base"></div>
-  </div>
-  <div class="sidebar">
+  </section>
+  <section class="sidebar">
     <div class="sidebar_top"></div>
     <div class="sidebar_item">
       <h3>Search</h3>
@@ -35,5 +35,5 @@
       </form>
     </div>
     <div class="sidebar_base"></div>
-  </div>
-</div>
+  </section>
+</aside>

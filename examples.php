@@ -10,9 +10,9 @@ include_once('includes/head.php');
     <?php include_once('includes/header.php'); ?>
     <div id="site_content">
       <?php include_once('includes/sidebar.php'); ?>
-      <div id="content">
+      <main id="content">
         <!-- insert the page content here -->
-        <!--<h1>Examples</h1>
+        <h1>Examples</h1>
         <p>This page contains examples of all the styled elements available as part of this design. Use this page for reference, whilst you build your website.</p>
         <h2>Headings</h2>
         <p>These are the different heading formats:</p>
@@ -78,12 +78,12 @@ include_once('includes/head.php');
             <p><span>Dropdown list example</span><select id="id" name="name"><option value="1">Example 1</option><option value="2">Example 2</option></select></p>
             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="button" /></p>
           </div>
-        </form>-->
+        </form>
       
       
       
       
-      </div>
+      </main>
     </div>
     <?php include_once('includes/footer.php') ?>
   </div>

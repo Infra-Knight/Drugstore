@@ -11,11 +11,11 @@ include_once('includes/head.php');
     <?php include_once('includes/header.php'); ?>
     <div id="site_content">
     <?php include_once('includes/sidebar.php'); ?>
-      <div id="content">
+      <main id="content">
         <!-- insert the page content here -->
         <h1>Another Page</h1>
         <?php include_once('includes/products-table.php'); ?>
-      </div>
+      </main>
     </div>
     <?php include_once('includes/footer.php') ?>
   </div>

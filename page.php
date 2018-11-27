@@ -18,9 +18,9 @@ include_once('includes/head.php');
     <?php include_once('includes/header.php'); ?>
     <div id="site_content">
       <?php include_once('includes/sidebar.php'); ?>
-      <div id="content">
-        <div id="map"></div>
-      </div>
+      <main id="content">
+        <section id="map"></section>
+      </main>
     </div>
     <?php include_once('includes/footer.php') ?>
   </div>
