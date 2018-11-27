@@ -9,14 +9,14 @@
 	<div class="header">
 		<h2>Register</h2>
 	</div>
-	
+
 	<form method="post" action="auth_register.php">
 
 		<?php include('auth_errors.php'); ?>
 
 		<div class="input-group">
-			<label>Username</label>
-			<input type="text" name="username" value="<?php echo $username; ?>">
+			<label>Full name</label>
+			<input type="text" name="fullname" value="<?php echo $fullname; ?>">
 		</div>
 		<div class="input-group">
 			<label>Email</label>

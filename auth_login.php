@@ -10,14 +10,14 @@
 	<div class="header">
 		<h2>Login</h2>
 	</div>
-	
+
 	<form method="post" action="auth_login.php">
 
 		<?php include('auth_errors.php'); ?>
 
 		<div class="input-group">
-			<label>Username</label>
-			<input type="text" name="username" >
+			<label>E-mail</label>
+			<input type="text" name="email">
 		</div>
 		<div class="input-group">
 			<label>Password</label>

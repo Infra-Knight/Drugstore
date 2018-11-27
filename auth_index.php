@@ -1,14 +1,14 @@
-<?php 
-	session_start(); 
+<?php
+	session_start();
 
-	if (!isset($_SESSION['username'])) {
+	if (!isset($_SESSION['email'])) {
 		$_SESSION['msg'] = "You must log in first";
 		header('location: auth_login.php');
 	}
 
 	if (isset($_GET['logout'])) {
 		session_destroy();
-		unset($_SESSION['username']);
+		unset($_SESSION['email']);
 		header("location: auth_login.php");
 	}
 
@@ -29,8 +29,8 @@
 		<?php if (isset($_SESSION['success'])) : ?>
 			<div class="error success" >
 				<h3>
-					<?php 
-						echo $_SESSION['success']; 
+					<?php
+						echo $_SESSION['success'];
 						unset($_SESSION['success']);
 					?>
 				</h3>
@@ -38,11 +38,11 @@
 		<?php endif ?>
 
 		<!-- logged in user information -->
-		<?php  if (isset($_SESSION['username'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+		<?php  if (isset($_SESSION['email'])) : ?>
+			<p>Welcome <strong><?php echo $_SESSION['email']; ?></strong></p>
 			<p> <a href="auth_index.php?logout='1'" style="color: red;">logout</a> </p>
 		<?php endif ?>
 	</div>
-		
+
 </body>
 </html>
