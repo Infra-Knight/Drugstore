@@ -3,10 +3,29 @@ $links = array();
 $links["index.php"] = "Home";
 $links["products.php"] = "Medicine List";
 $links["page.php"] = "Location";
-$links["examples.php"] = "Account";
+
 $links["contact.php"] = "Contact Us";
+
+if (!isset($has_session)) {
+  session_start();
+}
+
+if (isset($_GET['logout'])) {
+  session_destroy();
+  unset($_SESSION['email']);
+  header("location: ../index.php");
+}
 ?>
 <header id="header">
+  <div class="accounts">
+  <!-- logged in user information -->
+  <?php if (isset($_SESSION['email'])) { ?>
+    <div>Welcome <?php echo $_SESSION['rank']; ?> <strong style="color:#fff"><?php echo $_SESSION['email']; ?></strong><a href="auth/index.php?logout=1" style="margin-left:10px;color:red">Log out</a></div>
+  <?php } else { ?>
+    <a href="login.php">Login</a>
+    <a href="register.php">Register</a>
+  <?php } ?>
+  </div>
   <div id="logo">
     <div id="logo_text">
       <!-- class="logo_colour", allows you to change the colour of the text -->

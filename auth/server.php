@@ -26,9 +26,6 @@
 		$stmt->store_result();
 		$rnum = $stmt->num_rows;
 
-
-
-
 		// form validation: ensure that the form is correctly filled
 		if (empty($fullname)) { array_push($errors, "Full name is required"); }
 		if (empty($email)) { array_push($errors, "Email is required"); }
@@ -44,11 +41,11 @@
 			$query = "INSERT INTO user (fullname, email, password)
 								VALUES('$fullname', '$email', '$password')";
 			mysqli_query($db, $query);
-			
+
 			$_SESSION['email'] = $email;
 			$_SESSION['rank'] = "User";
 			$_SESSION['success'] = "You are now logged in";
-			header('location: index.php');
+			header('location: ../index.php');
 		}
 		if ($rnum!=0){array_push($errors, "Someone already register using this email");}
 	}
@@ -78,7 +75,7 @@
 					$_SESSION['email'] = $email;
 					$_SESSION['rank'] = "Admin";
 					$_SESSION['success'] = "You are now logged in";
-					header('location: index.php');
+					header('location: ../index.php');
 				}
 				$query1 = "SELECT * FROM `user` WHERE email='$email' AND rank=1";
 				$results1 = mysqli_query($db, $query1);
@@ -86,7 +83,7 @@
 					$_SESSION['email'] = $email;
 					$_SESSION['rank'] = "User";
 					$_SESSION['success'] = "You are now logged in";
-					header('location: index.php');
+					header('location: ../index.php');
 				}
 			}else {
 				array_push($errors, "Wrong email/password combination");
