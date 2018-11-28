@@ -44,8 +44,9 @@
 			$query = "INSERT INTO user (fullname, email, password)
 								VALUES('$fullname', '$email', '$password')";
 			mysqli_query($db, $query);
-
+			
 			$_SESSION['email'] = $email;
+			$_SESSION['rank'] = "User";
 			$_SESSION['success'] = "You are now logged in";
 			header('location: index.php');
 		}
@@ -71,9 +72,22 @@
 			$results = mysqli_query($db, $query);
 
 			if (mysqli_num_rows($results) == 1) {
-				$_SESSION['email'] = $email;
-				$_SESSION['success'] = "You are now logged in";
-				header('location: index.php');
+				$query0 = "SELECT * FROM `user` WHERE email='$email' AND rank=0";
+				$results0 = mysqli_query($db, $query0);
+				if (mysqli_num_rows($results0) == 1){
+					$_SESSION['email'] = $email;
+					$_SESSION['rank'] = "Admin";
+					$_SESSION['success'] = "You are now logged in";
+					header('location: index.php');
+				}
+				$query1 = "SELECT * FROM `user` WHERE email='$email' AND rank=1";
+				$results1 = mysqli_query($db, $query1);
+				if (mysqli_num_rows($results1) == 1){
+					$_SESSION['email'] = $email;
+					$_SESSION['rank'] = "User";
+					$_SESSION['success'] = "You are now logged in";
+					header('location: index.php');
+				}
 			}else {
 				array_push($errors, "Wrong email/password combination");
 			}

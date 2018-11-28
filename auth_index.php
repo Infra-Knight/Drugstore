@@ -39,7 +39,7 @@
 
 		<!-- logged in user information -->
 		<?php  if (isset($_SESSION['email'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['email']; ?></strong></p>
+			<p>Welcome <?php echo $_SESSION['rank']; ?> <strong><?php echo $_SESSION['email']; ?></strong></p>
 			<p> <a href="auth_index.php?logout='1'" style="color: red;">logout</a> </p>
 		<?php endif ?>
 	</div>
