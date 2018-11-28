@@ -25,12 +25,12 @@
 		</div>
 		<div class="input-group">
 			<button type="submit" class="btn" name="login_user">Login</button>
-		</div>
+		</div>	
 		<p>
 			Not yet a member? <a href="auth_register.php">Sign up</a>
 		</p>
+		<p><a href="index.php">Return</a></p>
 	</form>
-
-
+	
 </body>
 </html>

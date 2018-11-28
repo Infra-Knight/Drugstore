@@ -36,6 +36,7 @@
 		<p>
 			Already a member? <a href="auth_login.php">Sign in</a>
 		</p>
+		<p><a href="index.php">Return</a></p>
 	</form>
 </body>
 </html>

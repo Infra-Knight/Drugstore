@@ -9,20 +9,20 @@
 	if (isset($_GET['logout'])) {
 		session_destroy();
 		unset($_SESSION['email']);
-		header("location: auth_login.php");
+		header("location: examples.php");
 	}
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="auth_style.css">
+	<!--<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="auth_style.css">-->
 </head>
 <body>
-	<div class="header">
+	<!--<div class="header">
 		<h2>Home Page</h2>
-	</div>
+	</div>-->
 	<div class="content">
 
 		<!-- notification message -->

@@ -3,7 +3,7 @@ $links = array();
 $links["index.php"] = "Home";
 $links["products.php"] = "Medicine List";
 $links["page.php"] = "Location";
-$links["examples.php"] = "Examples";
+$links["examples.php"] = "Account";
 $links["contact.php"] = "Contact Us";
 ?>
 <header id="header">
